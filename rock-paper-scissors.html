@@ -1,6 +1,54 @@
 <!DOCTYPE html>
-
-
+    <script>
+        let computerPlay = Array("Rock", "Paper", "Scissors");
+        let computerSelection = computerPlay[Math.floor(Math.random() * computerPlay.length)];
+        let playerSelection = window.prompt("Enter either, Rock, Paper or Scissors");
+        let insensitivePlayerSelection = playerSelection.toLowerCase();
+        function theComputerPlay() {
+            console.log(computerSelection);
+        }
+        function playRound() {
+            if (insensitivePlayerSelection == "rock") {
+                if (computerSelection == "Rock") {
+                    alert("The computer played Rock, it's a tie!")
+                }
+                else if (computerSelection == "Paper") {
+                    alert("The computer played paper, you lose!")
+                }
+                else if (computerSelection == "Scissors") {
+                    alert("The computer played scissors, you win!")
+                }
+            }
+            else if (insensitivePlayerSelection == "paper") {
+                if (computerSelection == "Rock") {
+                    alert("The computer played Rock, you win!")
+                }
+                else if (computerSelection == "Paper") {
+                    alert("The computer played paper, it's a tie!")
+                }
+                else if (computerSelection == "Scissors") {
+                    alert("The computer played scissors, you lose!")
+                }
+            }
+            else if (insensitivePlayerSelection == "scissors") {
+                if (computerSelection == "Rock") {
+                    alert("The computer played Rock, you lose!")
+                }
+                else if (computerSelection == "Paper") {
+                    alert("The computer played paper, you win!")
+                }
+                else if (computerSelection == "Scissors") {
+                    alert("The computer played scissors, it's a tie!")
+                }
+            }
+            else {
+                alert("Please refresh the page and enter 'rock', 'paper' or 'scissors'.");
+            }
+        }
+        console.log(insensitivePlayerSelection);
+        theComputerPlay();
+        playRound();
+    </script>
 
 
 </html>
